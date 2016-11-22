@@ -100,13 +100,13 @@ public class Playground
     
     public void addPeople()
     {
+        SimpleRandom rand = new SimpleRandom(50);
         int counter = 0;
         for(Person p : people)
         {
             people[counter] = new Person();
-            people[counter].setAge(people[counter].getAge() + counter + 1);
+            people[counter].setAge(people[counter].getAge() + rand.nextInt());
             counter++;
         }
-        
     }
 }
