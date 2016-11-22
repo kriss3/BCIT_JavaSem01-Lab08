@@ -15,18 +15,31 @@ public class SimpleRandom
 {
     private int max;
     private int last;  
+    
+    public static final int PRIME_NUMBER = 32719;
+    public static final int NEXT_PRIME_NUMBER = 32749;
 
-    // constructor that takes the max int
-    public SimpleRandom(int max){
+    /**
+     * Custom constructor for SimpleRandom class; <br>
+     * It takes adventage of currentTimeMillis() that returns long from current time and cast it to integer;
+     * @param takes max as integer;
+     */ 
+    public SimpleRandom(int max)
+    {
         this.max = max;
-        last = (int)(System.currentTimeMillis() % max);
+        this.last = (int)(System.currentTimeMillis() % max);
     }
 
-    // Note that the result can not be bigger then 32749
-    // Magic number are large prime numbers
+    /**
+     * Public 
+     * Note that the result can not be bigger then 32749;<br>
+     * It uses reasanable prime numbers no greated than 32749
+     * @return returns a number as integer;
+     */
     public int nextInt()
     {
-        last = (last * 32719 + 3) % 32749;
+        //last = (last * 32719 + 3) % 32749;
+        last = (last * PRIME_NUMBER) % NEXT_PRIME_NUMBER;
         return last % max;
     }
 }

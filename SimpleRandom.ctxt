@@ -1,6 +1,8 @@
 #BlueJ class context
 comment0.params=max
 comment0.target=SimpleRandom(int)
+comment0.text=\r\n\ Custom\ constructor\ for\ SimpleRandom\ class;\ <br>\r\n\ It\ takes\ adventage\ of\ currentTimeMillis()\ that\ returns\ long\ from\ current\ time\ and\ cast\ it\ to\ integer;\r\n\ @param\ takes\ max\ as\ integer;\r\n
 comment1.params=
 comment1.target=int\ nextInt()
+comment1.text=\r\n\ Public\ \r\n\ Note\ that\ the\ result\ can\ not\ be\ bigger\ then\ 32749;<br>\r\n\ It\ uses\ reasanable\ prime\ numbers\ no\ greated\ than\ 32749\r\n\ @return\ returns\ a\ number\ as\ integer;\r\n
 numComments=2
